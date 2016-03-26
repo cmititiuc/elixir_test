@@ -1,4 +1,4 @@
-defmodule HelloPhoenix.ConnCase do
+defmodule ElixirTest.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,22 +20,23 @@ defmodule HelloPhoenix.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias HelloPhoenix.Repo
-      import Ecto.Model
-      import Ecto.Query, only: [from: 2]
+      alias ElixirTest.Repo
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query, only: [from: 1, from: 2]
 
-      import HelloPhoenix.Router.Helpers
+      import ElixirTest.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint HelloPhoenix.Endpoint
+      @endpoint ElixirTest.Endpoint
     end
   end
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(HelloPhoenix.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(ElixirTest.Repo, [])
     end
 
-    :ok
+    {:ok, conn: Phoenix.ConnTest.conn()}
   end
 end

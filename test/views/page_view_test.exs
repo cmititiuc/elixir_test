@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.PageViewTest do
-  use HelloPhoenix.ConnCase, async: true
+defmodule ElixirTest.PageViewTest do
+  use ElixirTest.ConnCase, async: true
 end
