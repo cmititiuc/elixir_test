@@ -1,14 +1,14 @@
-defmodule HelloPhoenix.Endpoint do
-  use Phoenix.Endpoint, otp_app: :hello_phoenix
+defmodule ElixirTest.Endpoint do
+  use Phoenix.Endpoint, otp_app: :elixir_test
 
-  socket "/socket", HelloPhoenix.UserSocket
+  socket "/socket", ElixirTest.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :hello_phoenix, gzip: false,
+    at: "/", from: :elixir_test, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -32,8 +32,8 @@ defmodule HelloPhoenix.Endpoint do
 
   plug Plug.Session,
     store: :cookie,
-    key: "_hello_phoenix_key",
-    signing_salt: "F+YhA25C"
+    key: "_elixir_test_key",
+    signing_salt: "dPgsVpiy"
 
-  plug HelloPhoenix.Router
+  plug ElixirTest.Router
 end

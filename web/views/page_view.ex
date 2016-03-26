@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.PageView do
-  use HelloPhoenix.Web, :view
+defmodule ElixirTest.PageView do
+  use ElixirTest.Web, :view
 end

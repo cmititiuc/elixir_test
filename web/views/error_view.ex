@@ -1,5 +1,5 @@
-defmodule HelloPhoenix.ErrorView do
-  use HelloPhoenix.Web, :view
+defmodule ElixirTest.ErrorView do
+  use ElixirTest.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

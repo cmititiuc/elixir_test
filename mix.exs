@@ -1,12 +1,12 @@
-defmodule HelloPhoenix.Mixfile do
+defmodule ElixirTest.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :hello_phoenix,
+    [app: :elixir_test,
      version: "0.0.1",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix] ++ Mix.compilers,
+     compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases,
@@ -17,8 +17,8 @@ defmodule HelloPhoenix.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {HelloPhoenix, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
+    [mod: {ElixirTest, []},
+     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -30,11 +30,12 @@ defmodule HelloPhoenix.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.1"},
+    [{:phoenix, "~> 1.1.4"},
+     {:postgrex, ">= 0.0.0"},
      {:phoenix_ecto, "~> 2.0"},
-     {:postgrex, "~> 0.7"},
-     {:phoenix_html, "~> 2.5"},
+     {:phoenix_html, "~> 2.4"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"}]
   end
 
