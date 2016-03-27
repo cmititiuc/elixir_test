@@ -39,10 +39,9 @@ exports.config = {
   paths: {
     // Dependencies and current project directories to watch
     watched: [
+      "web/elm/ElixirTest.elm",
       "web/static",
-      "test/static",
-      "test/static",
-      "web/elm/ElixirTest.elm"
+      "test/static"
     ],
 
     // Where to compile files to

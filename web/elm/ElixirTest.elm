@@ -1,8 +1,6 @@
 module ElixirTest where
 
-
 import Html
 
-
 main =
-  Html.text "Hello from Elm"
+  Html.text "Hello from Elm!"

@@ -1,8 +1,8 @@
-Elm.ElixirTest = Elm.ElixirTest || {};
-Elm.ElixirTest.make = function (_elm) {
+Elm.Main = Elm.Main || {};
+Elm.Main.make = function (_elm) {
    "use strict";
-   _elm.ElixirTest = _elm.ElixirTest || {};
-   if (_elm.ElixirTest.values) return _elm.ElixirTest.values;
+   _elm.Main = _elm.Main || {};
+   if (_elm.Main.values) return _elm.Main.values;
    var _U = Elm.Native.Utils.make(_elm),
    $Basics = Elm.Basics.make(_elm),
    $Debug = Elm.Debug.make(_elm),
@@ -13,5 +13,5 @@ Elm.ElixirTest.make = function (_elm) {
    $Signal = Elm.Signal.make(_elm);
    var _op = {};
    var main = $Html.text("Hello from Elm!");
-   return _elm.ElixirTest.values = {_op: _op,main: main};
+   return _elm.Main.values = {_op: _op,main: main};
 };

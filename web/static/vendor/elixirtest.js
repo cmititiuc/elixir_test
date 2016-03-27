@@ -10009,6 +10009,6 @@ Elm.ElixirTest.make = function (_elm) {
    $Result = Elm.Result.make(_elm),
    $Signal = Elm.Signal.make(_elm);
    var _op = {};
-   var main = $Html.text("Hello from Elm");
+   var main = $Html.text("Hello from Elm!");
    return _elm.ElixirTest.values = {_op: _op,main: main};
 };
