@@ -10,7 +10,10 @@ import Html.Attributes exposing (..)
 main : Html
 main =
   div
-    []
+    [ style
+        [ ( "text-align", "center" )
+        ]
+    ]
     [ heading
     , shapesImage
     , sourceCodeLink
@@ -20,11 +23,8 @@ main =
 heading : Html
 heading =
   h3
-    [ style
-        [ ( "text-align", "center" )
-        ]
-    ]
-    [ Html.text "Elixir, Phoenix, Elm, Dokku"
+    []
+    [ Html.text "Elixir, Phoenix, Elm, Brunch, Dokku"
     ]
 
 
@@ -46,7 +46,7 @@ sourceCodeLink =
   ul
     [ class "nav nav-pills"
     , style
-        [ ( "float", "right" )
+        [ ( "display", "inline-block" )
         ]
     ]
     [ li
