@@ -31,9 +31,23 @@ main =
               |> move (60,30)
           , ngon 3 60
               |> filled clearRed
-              |> move (-60, -30)
+              |> move (-60,-30)
           ]
         )
+    , ul
+        [ class "nav nav-pills"
+        , style
+            [ ("float", "right")
+            ]
+        ]
+        [ li []
+            [ a
+                [ href "https://github.com/cmititiuc/elixir_test/tree/phoenix-elm-deploy"
+                ]
+                [ Html.text "View Source Code"
+                ]
+            ]
+        ]
     ]
 
 
