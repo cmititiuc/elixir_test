@@ -2,8 +2,6 @@ module ElixirTest where
 
 import Color exposing (..)
 import Graphics.Collage exposing (..)
-import Graphics.Element exposing (..)
-import Text exposing (fromString)
 import Html exposing(..)
 import Html.Attributes exposing (..)
 
@@ -23,17 +21,19 @@ main =
         ]
         [ Html.text "Elixir, Phoenix, Elm, Dokku"
         ]
-    , fromElement (collage 400 200
-        [ ngon 4 70
-            |> filled clearBlue
-            |> move (00,0)
-        , ngon 5 50
-            |> filled clearGreen
-            |> move (60,30)
-        , ngon 3 60
-            |> filled clearRed
-            |> move (-60, -30)
-        ])
+    , fromElement
+        (collage 400 200
+          [ ngon 4 70
+              |> filled clearBlue
+              |> move (00,0)
+          , ngon 5 50
+              |> filled clearGreen
+              |> move (60,30)
+          , ngon 3 60
+              |> filled clearRed
+              |> move (-60, -30)
+          ]
+        )
     ]
 
 
